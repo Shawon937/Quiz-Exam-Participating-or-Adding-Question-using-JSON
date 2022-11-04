@@ -29,11 +29,5 @@ public class JSONQuizMain {
         catch (Exception e){
             System.out.println("Exception!!!");
         }
-
-
     }
-
-
-
-
 }

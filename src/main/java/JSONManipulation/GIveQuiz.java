@@ -12,8 +12,6 @@ import java.util.Scanner;
 public class GIveQuiz {
     static void giveQuiz() throws IOException, ParseException {
         try {
-            Scanner sc = new Scanner(System.in);
-
             System.out.println("\nYou will be asked 5 questions, each questions has 1 marks");
             System.out.println("If \"Option a\" is the correct answer. Then Enter \"a\" for answering");
             System.out.println("Lets Start the Exam!!!\n");
@@ -24,9 +22,10 @@ public class GIveQuiz {
 
             int marks = 0;
             for (int i = 0; i < 5; i++) {
+                Scanner sc = new Scanner(System.in);
                 int min = 0;
                 int max = jsonArray.size();
-                double randQDouble = Math.random() * (max - min);
+                double randQDouble = Math.random() * (max - min) + min;
                 int randQInt = (int) Math.round(randQDouble);
 
                 JSONObject quizObj = new JSONObject();
